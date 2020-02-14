@@ -15,7 +15,7 @@ router.get("/test", (req, res) => {
   });
 });
 
+app.set('view engine', 'pug');
 app.use(`/.netlify/functions/api`, router);
-
 module.exports = app;
 module.exports.handler = serverless(app);
